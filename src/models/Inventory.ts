@@ -1,24 +1,24 @@
 export class Inventory {
 
-    Itemid: number;
-    Itemname: string;
-    Ammount: number;
-    Price: number;
+    itemid: number;
+    itemname: string;
+    ammount: number;
+    price: number;
     
     
     
-    // Structure of account
+    // Structure of Inventory
     
     static from(obj: InventoryRow): Inventory {
-        const inventory = new Inventory(obj.Itemid, obj.Itemname, obj.Ammount, obj.Price);
+        const inventory = new Inventory(obj.itemid, obj.itemname, obj.ammount, obj.price);
         return inventory;
     }
     
-    constructor(Itemid: number, Itemname: string, Ammount: number, Price: number) {
-        this.Itemid = Itemid;
-        this.Itemname = Itemname;
-        this.Ammount = Ammount;
-        this.Price = Price;
+    constructor(itemid: number, itemname: string, ammount: number, price: number) {
+        this.itemid = itemid;
+        this.itemname = itemname;
+        this.ammount = ammount;
+        this.price = price;
     }
     
     
@@ -27,10 +27,10 @@ export class Inventory {
     
     export interface InventoryRow {
     
-        Itemid: number;
-        Itemname: string;
-        Ammount: number;
-        Price: number;
+        itemid: number;
+        itemname: string;
+        ammount: number;
+        price: number;
     
     
     

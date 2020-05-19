@@ -4,7 +4,7 @@ import * as AccountService from '../services/Account-service';
 // Set export
 export const AccountRouter = express.Router();
 
-//     http://localhost:3000/account
+//     http://localhost:3000/Admin_Accounts
 
 AccountRouter.get('', (request, response, next) => {
     AccountService.adminGetAccounts().then(accounts => {
