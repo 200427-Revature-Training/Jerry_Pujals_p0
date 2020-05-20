@@ -4,7 +4,7 @@ import { InventoryRouter } from '../../src/router/Inventory-router';
 import * as InventoryService from '../../src/services/Inventory-service';
 import request from 'supertest';
 
-// Mock of account service
+// Mock of Inventory service
 jest.mock('../../src/services/Inventory-service');
 const mockInventoryService = InventoryService as any;
 
@@ -85,3 +85,5 @@ test('500 internal server error', async() => {
         .expect(500)
 })
 });
+
+

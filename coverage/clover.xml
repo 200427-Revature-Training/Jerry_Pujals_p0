@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1589952569666" clover="3.2.0">
-  <project timestamp="1589952569666" name="All files">
-    <metrics statements="128" coveredstatements="91" conditionals="15" coveredconditionals="12" methods="49" coveredmethods="24" elements="192" coveredelements="127" complexity="0" loc="128" ncloc="128" packages="4" files="9" classes="9"/>
+<coverage generated="1589954135267" clover="3.2.0">
+  <project timestamp="1589954135267" name="All files">
+    <metrics statements="196" coveredstatements="137" conditionals="24" coveredconditionals="19" methods="75" coveredmethods="36" elements="295" coveredelements="192" complexity="0" loc="196" ncloc="196" packages="4" files="13" classes="13"/>
     <package name="daos">
-      <metrics statements="39" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="19" coveredmethods="0"/>
+      <metrics statements="61" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="30" coveredmethods="0"/>
       <file name="account-dao.ts" path="C:\Users\jpuja\Documents\Revature\Jerry_Pujals_p0\src\daos\account-dao.ts">
         <metrics statements="18" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
@@ -27,9 +27,9 @@
       </file>
       <file name="database.ts" path="C:\Users\jpuja\Documents\Revature\Jerry_Pujals_p0\src\daos\database.ts">
         <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="4" type="stmt"/>
-        <line num="5" count="4" type="stmt"/>
-        <line num="13" count="4" type="stmt"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
       </file>
       <file name="inventory-dao.ts" path="C:\Users\jpuja\Documents\Revature\Jerry_Pujals_p0\src\daos\inventory-dao.ts">
@@ -52,9 +52,34 @@
         <line num="42" count="0" type="stmt"/>
         <line num="43" count="0" type="stmt"/>
       </file>
+      <file name="shipment-dao.ts" path="C:\Users\jpuja\Documents\Revature\Jerry_Pujals_p0\src\daos\shipment-dao.ts">
+        <metrics statements="22" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+      </file>
     </package>
     <package name="models">
-      <metrics statements="15" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+      <metrics statements="24" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
       <file name="Account.ts" path="C:\Users\jpuja\Documents\Revature\Jerry_Pujals_p0\src\models\Account.ts">
         <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="3" type="stmt"/>
@@ -68,7 +93,7 @@
       </file>
       <file name="Inventory.ts" path="C:\Users\jpuja\Documents\Revature\Jerry_Pujals_p0\src\models\Inventory.ts">
         <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-        <line num="1" count="3" type="stmt"/>
+        <line num="1" count="5" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="18" count="3" type="stmt"/>
@@ -76,9 +101,21 @@
         <line num="20" count="3" type="stmt"/>
         <line num="21" count="3" type="stmt"/>
       </file>
+      <file name="Shipment.ts" path="C:\Users\jpuja\Documents\Revature\Jerry_Pujals_p0\src\models\Shipment.ts">
+        <metrics statements="9" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="24" count="5" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+      </file>
     </package>
     <package name="router">
-      <metrics statements="52" coveredstatements="51" conditionals="4" coveredconditionals="3" methods="18" coveredmethods="18"/>
+      <metrics statements="78" coveredstatements="76" conditionals="6" coveredconditionals="4" methods="27" coveredmethods="27"/>
       <file name="Account-router.ts" path="C:\Users\jpuja\Documents\Revature\Jerry_Pujals_p0\src\router\Account-router.ts">
         <metrics statements="26" coveredstatements="26" conditionals="2" coveredconditionals="2" methods="9" coveredmethods="9"/>
         <line num="1" count="1" type="stmt"/>
@@ -137,9 +174,38 @@
         <line num="51" count="1" type="stmt"/>
         <line num="52" count="1" type="stmt"/>
       </file>
+      <file name="Shipment-router.ts" path="C:\Users\jpuja\Documents\Revature\Jerry_Pujals_p0\src\router\Shipment-router.ts">
+        <metrics statements="26" coveredstatements="25" conditionals="2" coveredconditionals="1" methods="9" coveredmethods="9"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+      </file>
     </package>
     <package name="services">
-      <metrics statements="22" coveredstatements="16" conditionals="11" coveredconditionals="9" methods="8" coveredmethods="4"/>
+      <metrics statements="33" coveredstatements="24" conditionals="18" coveredconditionals="15" methods="12" coveredmethods="6"/>
       <file name="Account-service.ts" path="C:\Users\jpuja\Documents\Revature\Jerry_Pujals_p0\src\services\Account-service.ts">
         <metrics statements="11" coveredstatements="8" conditionals="6" coveredconditionals="5" methods="4" coveredmethods="2"/>
         <line num="1" count="2" type="stmt"/>
@@ -165,6 +231,20 @@
         <line num="24" count="3" type="cond" truecount="4" falsecount="1"/>
         <line num="26" count="0" type="stmt"/>
         <line num="31" count="3" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+      </file>
+      <file name="Shipment-service.ts" path="C:\Users\jpuja\Documents\Revature\Jerry_Pujals_p0\src\services\Shipment-service.ts">
+        <metrics statements="11" coveredstatements="8" conditionals="7" coveredconditionals="6" methods="4" coveredmethods="2"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="24" count="5" type="cond" truecount="6" falsecount="1"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="31" count="5" type="stmt"/>
         <line num="37" count="2" type="stmt"/>
         <line num="39" count="0" type="stmt"/>
       </file>
