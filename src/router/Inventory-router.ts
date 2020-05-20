@@ -42,7 +42,7 @@ InventoryRouter.post('/:itemid', (request, response, next) => {
     
     InventoryService.removeItem(itemid).then(inventory => {
         if (!inventory) {
-            response.sendStatus(404);
+            response.sendStatus(200);
         } else {
             response.json(inventory);
         }

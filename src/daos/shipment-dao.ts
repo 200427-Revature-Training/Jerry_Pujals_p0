@@ -1,6 +1,7 @@
 import { database } from '../daos/database';
 import { Shipment, ShipmentRow } from '../models/Shipment';
-
+import * as InventoryDao from '../daos/inventory-dao';
+import { Inventory, InventoryRow } from '../models/Inventory';
 
 // SQL functions
 
@@ -21,24 +22,36 @@ export function adminGetShipments(): Promise<Shipment[]> {
 
 
 // Makes a shipment
-export function addItem(inventory: Inventory): Promise<Inventory> {
+export function addOrder(shipment: Shipment): Promise<Shipment> {
     
-    const sql = `INSERT INTO inventory (itemname,ammount,price) \
-VALUES ($1, $2, $3) RETURNING *`;
+    const sql = `INSERT INTO orders (destination,account,itemnum,quant,total_pay) \
+VALUES ($1, $2, $3, $4, $5) RETURNING *`;
 
-    return database.query<InventoryRow>(sql, [
-        inventory.itemname,
-        inventory.ammount,
-        inventory.price
+
+
+    const result = database.query<ShipmentRow>(sql, [
+        shipment.destination ,
+        shipment.account,
+        shipment.itemnum,
+        shipment.quant,
+        shipment.total_pay
         
-    ]).then(result => result.rows.map(row => Inventory.from(row))[0]);
+    ]).then(result => result.rows.map(row => Shipment.from(row))[0]);
+
+
+const sql2 = 'update inventory set ammount = ammount-$2 where itemid = $1 ;';
+     database.query<InventoryRow>(sql2, [shipment.itemnum,shipment.quant])
+        .then(result => result.rows.map(row => Inventory.from(row))[0]);
+    
+
+    return result;
 }
 
 
 // Removes a shipment
-export function removeItem(itemid: number): Promise<Inventory> {    
+export function deleteOrder(ordernum: number): Promise<Shipment> {    
    
-    const sql = 'DELETE FROM public.inventory WHERE itemid= $1';
-    return database.query<InventoryRow>(sql, [itemid])
-        .then(result => result.rows.map(row => Inventory.from(row))[0]);
+    const sql = 'DELETE FROM public.orders WHERE ordernum= $1';
+    return database.query<ShipmentRow>(sql, [ordernum])
+        .then(result => result.rows.map(row => Shipment.from(row))[0]);
 }

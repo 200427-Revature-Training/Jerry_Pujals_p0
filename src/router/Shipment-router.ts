@@ -41,7 +41,7 @@ ShipmentRouter.post('/:ordernum', (request, response, next) => {
    
     ShipmentService.deleteOrder(ordernum).then(shipment => {
         if (!shipment) {
-            response.sendStatus(404);
+            response.sendStatus(200);
         } else {
             response.json(shipment);
         }

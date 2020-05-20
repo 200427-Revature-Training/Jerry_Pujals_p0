@@ -34,9 +34,9 @@ export function addOrder(shipment: any): Promise<Shipment> {
 
 
 // Removes order from shipments by order id
-export function deleteOrder(orderid: number): Promise<Shipment> {
+export function deleteOrder(ordernum: number): Promise<Shipment> {
 
-    return ShipmentDao.deleteOrder(orderid);
+    return ShipmentDao.deleteOrder(ordernum);
 
 
 }

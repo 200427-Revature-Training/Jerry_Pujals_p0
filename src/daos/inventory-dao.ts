@@ -33,6 +33,8 @@ VALUES ($1, $2, $3) RETURNING *`;
     ]).then(result => result.rows.map(row => Inventory.from(row))[0]);
 }
 
+
+
 // Removes a item from inventory
 export function removeItem(itemid: number): Promise<Inventory> {    
    
@@ -40,3 +42,4 @@ export function removeItem(itemid: number): Promise<Inventory> {
     return database.query<InventoryRow>(sql, [itemid])
         .then(result => result.rows.map(row => Inventory.from(row))[0]);
 }
+
