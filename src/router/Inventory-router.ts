@@ -4,7 +4,8 @@ import * as InventoryService from '../services/Inventory-service';
 // Set export
 export const InventoryRouter = express.Router();
 
-//     http://localhost:3000/
+// GET    http://localhost:3000/Inventory
+
 
 InventoryRouter.get('', (request, response, next) => {
     InventoryService.GetInventory().then(inventoryies => {
@@ -14,4 +15,40 @@ InventoryRouter.get('', (request, response, next) => {
     }).catch(err => {
         response.sendStatus(500);
     });
+});
+
+/*
+    POST http://localhost:3000/Inventory
+*/
+InventoryRouter.post('', (request, response, next) => {
+    const inventory = request.body;
+    InventoryService.addItem(inventory)
+        .then(newInventory => {
+            
+            response.status(201);
+            response.json(newInventory);
+            next();
+        }).catch(err => {
+            response.sendStatus(500);
+            next();
+        });
+});
+
+
+//  Post   http://localhost:3000/Inventory/itemid
+
+InventoryRouter.post('/:itemid', (request, response, next) => {
+    const itemid = +request.params.itemid;
+    
+    InventoryService.removeItem(itemid).then(inventory => {
+        if (!inventory) {
+            response.sendStatus(404);
+        } else {
+            response.json(inventory);
+        }
+        next();
+    }).catch(err => {
+        response.sendStatus(500);
+        next();
+    })
 });

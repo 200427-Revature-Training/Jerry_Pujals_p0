@@ -18,3 +18,23 @@ export function adminGetAccounts(): Promise<Account[]> {
         return accounts;
     });
 }
+
+export function adminGetAccountById(id: number): Promise<Account> {
+    const sql = 'SELECT * FROM accountinfo WHERE accid = $1';
+
+    return database.query<AccountRow>(sql, [id])
+        .then(result => result.rows.map(row => Account.from(row))[0]);
+}
+
+export function makeAccount(account: Account): Promise<Account> {
+    console.log(account);
+    const sql = `INSERT INTO accountinfo ("Name" ,"Password","Address","card") \
+VALUES ($1, $2, $3, $4) RETURNING *`;
+
+    return database.query<AccountRow>(sql, [
+        account.Name,
+        account.Password,
+        account.Address,
+        account.card
+    ]).then(result => result.rows.map(row => Account.from(row))[0]);
+}

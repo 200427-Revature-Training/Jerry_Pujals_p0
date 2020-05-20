@@ -15,3 +15,42 @@ AccountRouter.get('', (request, response, next) => {
         response.sendStatus(500);
     });
 });
+
+
+
+
+//  GET   http://localhost:3000/Admin_Accounts/id
+
+AccountRouter.get('/:id', (request, response, next) => {
+    const id = +request.params.id;
+    
+    AccountService.adminGetAccountById(id).then(account => {
+        if (!account) {
+            response.sendStatus(404);
+        } else {
+            response.json(account);
+        }
+        next();
+    }).catch(err => {
+        response.sendStatus(500);
+        next();
+    })
+});
+
+/*
+    POST http://localhost:3000/Admin_Accounts
+*/
+AccountRouter.post('', (request, response, next) => {
+    const account = request.body;
+    AccountService.makeAccount(account)
+        .then(newAccount => {
+            
+            response.status(201);
+            response.json(newAccount);
+            next();
+        }).catch(err => {
+            response.sendStatus(500);
+            next();
+        });
+});
+

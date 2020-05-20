@@ -1,7 +1,7 @@
 export class Account {
 
 Name: string;
-Accid: number;
+accid: number;
 Password: string;
 Address: string;
 card: number;
@@ -10,13 +10,13 @@ card: number;
 // Structure of account
 
 static from(obj: AccountRow): Account {
-    const account = new Account(obj.Name, obj.Accid, obj.Password, obj.Address, obj.card);
+    const account = new Account(obj.Name, obj.accid, obj.Password, obj.Address, obj.card);
     return account;
 }
 
-constructor(Name: string, Accid: number, Password: string, Address: string, card: number) {
+constructor(Name: string, accid: number, Password: string, Address: string, card: number) {
     this.Name = Name;
-    this.Accid = Accid;
+    this.accid = accid;
     this.Password = Password;
     this.Address = Address;
     this.card = card;
@@ -29,7 +29,7 @@ constructor(Name: string, Accid: number, Password: string, Address: string, card
 export interface AccountRow {
 
     Name: string;
-    Accid: number;
+    accid: number;
     Password: string;
     Address: string;
     card: number;
