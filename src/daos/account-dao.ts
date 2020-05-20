@@ -1,3 +1,5 @@
+/* istanbul ignore file */
+
 import { database } from '../daos/database';
 import { Account, AccountRow } from '../models/Account';
 

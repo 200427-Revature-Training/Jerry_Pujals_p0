@@ -1,3 +1,5 @@
+/* istanbul ignore file */
+
 import { database } from '../daos/database';
 import { Inventory, InventoryRow } from '../models/Inventory';
 
